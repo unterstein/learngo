@@ -6,7 +6,10 @@ import (
 )
 
 func main() {
+	var separator, result string
 	for i := 1; i < len(os.Args); i++ {
-		fmt.Println(os.Args[i])
+		result += separator + os.Args[i]
+		separator = ", "
 	}
+	fmt.Println(result)
 }
